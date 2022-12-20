@@ -1,0 +1,16 @@
+/* h2{
+    background-color: darkblue;
+    color: white;
+    padding: 20px 10px;
+} */
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  mat-icon{
+    margin-left: 5px;
+  }
+  a{
+    color: white;
+    /* text-decoration: none; */
+  }
+  

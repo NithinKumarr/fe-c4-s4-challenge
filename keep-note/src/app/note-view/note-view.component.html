@@ -1,0 +1,8 @@
+<div id="div2">
+    <app-add-note (noteAdded)="onNoteAdded($event)"></app-add-note>
+</div>
+<app-search (searchTextChanged)="onSearchTextChanged($event)"></app-search>
+<div >
+<app-note *ngFor="let note of notes" [Note]="note"></app-note>
+</div>
+

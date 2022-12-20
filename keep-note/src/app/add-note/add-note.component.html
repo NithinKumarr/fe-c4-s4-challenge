@@ -1,0 +1,66 @@
+<div id="form">
+    <mat-expansion-panel >
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+       <h3 id="title">New Note</h3>
+      </mat-panel-title>
+      <mat-panel-description></mat-panel-description>
+    </mat-expansion-panel-header>
+    
+    
+<form (ngSubmit)="onsubmit(keepNoteform)" #keepNoteform="ngForm">
+
+    <div>
+        <mat-form-field>
+            <mat-label>Note Title</mat-label>
+            <input matInput type="text" name="noteTitle" [(ngModel)]="note.title" #noteTitle="ngModel" required minlength="5" >
+            <div *ngIf="noteTitle.invalid && (noteTitle.touched || noteTitle.dirty)">
+                <div *ngIf="noteTitle.errors?.['required']">Note Title is required</div>
+                <div *ngIf="noteTitle.errors?.['minlength']">Note Title Minimum length is 5</div>
+            </div>
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field>
+            <mat-label>Note Content</mat-label>
+            <input matInput type="text" name="noteContent" [(ngModel)]="note.content" #noteContent="ngModel" required minlength="5" >
+            <div *ngIf="noteContent.invalid && (noteContent.touched || noteContent.dirty)">
+                <div *ngIf="noteContent.errors?.['required']">Note Title is required</div>
+                <div *ngIf="noteContent.errors?.['minlength']">Note Content Minimum length is 5</div>
+            </div>
+        </mat-form-field>
+    </div>
+
+    <!-- <div>
+        <mat-form-field appearance="fill">
+            <mat-label>Reminder Date</mat-label>
+            <input matInput [matDatepicker]="picker" name="date" [(ngModel)]="note.reminderDate" #date="ngModel">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    </div> -->
+
+    <!-- <div>
+        <mat-form-field>
+            <mat-label>Add Category</mat-label>
+            <textarea  matInput name="noteCategory" [(ngModel)]="note.category" #noteCategory="ngModel" cols="30" rows="3"></textarea>
+        </mat-form-field>
+    </div> -->
+
+    <!-- <div>
+        <h3>Priority</h3>
+        <mat-radio-group name="priority" [(ngModel)]="note.priority" #date="ngModel">
+            <mat-radio-button value="Low">Low</mat-radio-button>
+            <mat-radio-button value="Medi">Medium</mat-radio-button>
+            <mat-radio-button value="High">High</mat-radio-button>
+            <mat-radio-button value="Critical">Critical</mat-radio-button>
+        </mat-radio-group>
+    </div> -->
+    <div>
+        <button mat-button (click)="AddNote()" class="save"><mat-icon>save</mat-icon></button>
+    </div>
+</form>
+</mat-expansion-panel>
+</div>

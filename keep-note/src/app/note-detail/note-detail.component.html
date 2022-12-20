@@ -1,0 +1,25 @@
+<mat-card mat-ripple class="card-content">
+    <mat-card-header id="p1"><h3 id="title">{{note.title}}</h3></mat-card-header>
+        <mat-card-content id="p2">{{note.content}}</mat-card-content>
+
+
+        <form>
+            <mat-form-field appearance="fill">
+                <mat-label>Note Title</mat-label>
+                <input matInput [(ngModel)]="note.title" name="title" type="text" >
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="fill">
+                <mat-label>Note Content</mat-label>
+                <input matInput [(ngModel)]="note.content" name="Content" type="text" >
+            </mat-form-field>
+        </form>
+        <mat-card-actions>
+            <button mat-icon-button (click)="editNote()" color="primary">
+                <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button (click)="deleteNote()" color="warn">
+                <mat-icon>delete</mat-icon>
+            </button>
+        </mat-card-actions>
+</mat-card>

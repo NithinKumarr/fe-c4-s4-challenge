@@ -1,0 +1,25 @@
+#card{
+    border: .1 solid gray;
+    width: 200px;
+    float: left;
+    padding: 10px;
+    margin-left: 80px;
+    text-align: center;
+    border-radius: 10px;
+    
+}
+mat-card-footer{
+    color: black;
+}
+button{
+    background-color: lightgray;
+    float: left;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+#card-content{
+    padding: 10px;
+}
+#title{
+    font-weight: 500;
+}

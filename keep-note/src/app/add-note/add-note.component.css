@@ -1,0 +1,15 @@
+#form{
+    margin-top: 50px;
+    margin-left: 340px;
+    margin-right: 340px;
+    padding: 30px;
+}
+mat-form-field{
+    width: 600px;
+}
+.save{
+    background-color: lightgray;
+}
+#title{
+    margin-top: 20px;
+}
